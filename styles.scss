@@ -1,0 +1,51 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    &_Header {
+        display: flex;
+        justify-content: center;
+    }
+
+    display: grid;
+    width: 80vw;
+    grid-template-columns: repeat(1, 1fr);
+    &_Button {
+        height: 20px;
+        width: 100px;
+    }
+
+    &_Output {
+        background-color: lightgray;
+        border: 1px solid black;
+        border-radius: 5px;
+        height: 30vh;
+        display: flex;
+        justify-content: left;
+    }
+
+    &_Input {
+        border: 1px solid black;
+        border-radius: 5px;
+        height: 30vh;
+    }
+
+    &_Container {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+
+        &--buttons {
+            display: flex;
+            justify-content: space-around;
+            padding-top: 50px;
+        }
+
+        &_Mode {
+            width: 200px;
+        }
+    }
+}

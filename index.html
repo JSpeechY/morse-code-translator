@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./index.js" type="module"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Morse Code Translator 👴🤓 - -- --- .-. ... . / -.-. --- -.. . / - .-. .- -. ... .-.. .- - --- .-.</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="wrapper_Header">
+            <h1>Morse Code Translator</h1>
+        </header>
+        <div class="wrapper_Container">
+            <h2 class="wrapper_Text">Input</h2>
+            <textarea style="resize: none;" class="wrapper_Input" type="text"
+                placeholder="Print the secrets ye need translated here..."></textarea>
+
+        </div>
+        <div class="wrapper_Container--buttons">
+            <button class="wrapper_Button wrapper_Button-Mode">Switch Mode</button>
+            <span class=wrapper_Container_Mode>Decoding morse...</span>
+            <button class="wrapper_Button-Generate wrapper_Button" type="submit">Translate >>></button>
+        </div>
+        <div class="wrapper_Container">
+            <h2 class="wrapper_Text">Output</h2>
+            <textarea style="resize: none;" class="wrapper_Output" readonly></textarea>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  display: grid;
+  width: 80vw;
+  grid-template-columns: repeat(1, 1fr);
+}
+.wrapper_Header {
+  display: flex;
+  justify-content: center;
+}
+.wrapper_Button {
+  height: 20px;
+  width: 100px;
+}
+.wrapper_Output {
+  background-color: lightgray;
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 30vh;
+  display: flex;
+  justify-content: left;
+}
+.wrapper_Input {
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 30vh;
+}
+.wrapper_Container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  text-align: center;
+}
+.wrapper_Container--buttons {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 50px;
+}
+.wrapper_Container_Mode {
+  width: 200px;
+}
