@@ -46,8 +46,6 @@ export const ref2 = Object.fromEntries(
     Object.entries(ref).map((a) => a.reverse())
 );
 
-const outputText = [];
-
 export const translate = (inputText) => {
     const arr = inputText.toLowerCase().split("");
     const output = arr.map((character) => ref2[character]);
