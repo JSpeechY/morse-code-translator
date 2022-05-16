@@ -1,0 +1,39 @@
+@use "palette";
+
+$primary-font: "Shatter";
+$secondary-font: sans-serif;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $primary-font;
+
+    color: map-get(palette.$colors, "quinary");
+    text-shadow: 0 0 0.25rem map-get(palette.$colors, "secondary"),
+        0 0 0.25rem map-get(palette.$colors, "secondary");
+    list-style: none;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+.container {
+    &_Input {
+        color: map-get(palette.$colors, "quinary");
+    }
+    &_Output {
+        color: map-get(palette.$colors, "quinary");
+    }
+}
+
+p,
+a,
+li {
+    font-family: $secondary-font;
+    color: white;
+    list-style: none;
+}

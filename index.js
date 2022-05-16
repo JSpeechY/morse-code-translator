@@ -1,4 +1,4 @@
-const ref = {
+export const ref = {
     ".-": "a",
     "-...": "b",
     "-.-.": "c",
@@ -42,49 +42,44 @@ const ref = {
     "..--..": "?",
 };
 
-const ref2 = Object.fromEntries(Object.entries(ref).map((a) => a.reverse()));
-
-console.log(ref);
-console.log(ref2);
-console.log(Object.entries(ref2).join(","));
-
-// create a function where a string which is a sentence is converted into morse code
-// create a function where a string of morse code is converted into a sentence
+export const ref2 = Object.fromEntries(
+    Object.entries(ref).map((a) => a.reverse())
+);
 
 const outputText = [];
 
-const translate = (inputText) => {
+export const translate = (inputText) => {
     const arr = inputText.toLowerCase().split("");
     const output = arr.map((character) => ref2[character]);
     const final = output.join(" ");
-    console.log(final);
     return final;
 };
 
-translate("I like you do you like me?");
-
-const decode = (morseCode) => {
+export const decode = (morseCode) => {
     const arr = morseCode.split(" ");
     const output = arr.map((index) => ref[index]);
     const final = output.join("");
-
     return final;
 };
 
-decode(
-    ".. / .-.. .. -.- . / -.-- --- ..- / -.. --- / -.-- --- ..- / .-.. .. -.- . / -- . ··--··"
+const outputField = document.querySelector(".container_Output");
+const inputField = document.querySelector(".container_Input");
+const buttonGenerate = document.querySelector(
+    ".buttonsContainer_Button-Generate"
 );
-
-const outputField = document.querySelector(".wrapper_Output");
-const inputField = document.querySelector(".wrapper_Input");
-const buttonGenerate = document.querySelector(".wrapper_Button-Generate");
-const buttonChangeMode = document.querySelector(".wrapper_Button-Mode");
-const modeIndicator = document.querySelector(".wrapper_Container_Mode");
+const buttonSwitchMode = document.querySelector(
+    ".buttonsContainer_Button-Switch"
+);
+const modeIndicator = document.querySelector(".wrapper_Text");
 let mode = false;
 
-const changeMode = (event) => {
+const switchMode = (event) => {
     event.preventDefault();
     mode = !mode;
+    let tmp = outputField.value;
+    outputField.innerHTML = inputField.value;
+    inputField.value = tmp;
+
     if (mode === false) {
         return (modeIndicator.innerHTML = "Decoding Morse");
     } else {
@@ -102,4 +97,4 @@ const generateOutput = (event) => {
 };
 
 buttonGenerate.addEventListener("click", generateOutput);
-buttonChangeMode.addEventListener("click", changeMode);
+buttonSwitchMode.addEventListener("click", switchMode);

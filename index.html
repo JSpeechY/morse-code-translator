@@ -11,24 +11,25 @@
 </head>
 
 <body>
-    <div class="wrapper">
-        <header class="wrapper_Header">
+    <div class="wrapper ">
+        <header class="header">
             <h1>Morse Code Translator</h1>
         </header>
-        <div class="wrapper_Container">
-            <h2 class="wrapper_Text">Input</h2>
-            <textarea style="resize: none;" class="wrapper_Input" type="text"
+        <div class="container">
+            <h2 class="container_Text">Input</h2>
+            <textarea style="resize: none;" class="container_Input border" type="text"
                 placeholder="Print the secrets ye need translated here..."></textarea>
 
         </div>
-        <div class="wrapper_Container--buttons">
-            <button class="wrapper_Button wrapper_Button-Mode">Switch Mode</button>
-            <span class=wrapper_Container_Mode>Decoding morse...</span>
-            <button class="wrapper_Button-Generate wrapper_Button" type="submit">Translate >>></button>
+        <h3 class="wrapper_Text">Decoding morse...</h3>
+        <div class="buttonsContainer">
+            <button class="buttonsContainer_Button buttonsContainer_Button-Switch border">Switch Mode</button>
+            <button class="buttonsContainer_Button-Generate buttonsContainer_Button border" type="submit">Translate
+                >>></button>
         </div>
-        <div class="wrapper_Container">
-            <h2 class="wrapper_Text">Output</h2>
-            <textarea style="resize: none;" class="wrapper_Output" readonly></textarea>
+        <div class="container">
+            <h2 class="container_Text">Output</h2>
+            <textarea class="container_Output border" readonly></textarea>
         </div>
     </div>
 </body>

@@ -1,45 +1,97 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Shatter";
+  color: #ffffff;
+  text-shadow: 0 0 0.25rem #767a3a, 0 0 0.25rem #767a3a;
+  list-style: none;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+.container_Input {
+  color: #ffffff;
+}
+.container_Output {
+  color: #ffffff;
+}
+
+p,
+a,
+li {
+  font-family: sans-serif;
+  color: white;
+  list-style: none;
+}
+
+::selection {
+  background-color: hotpink;
+}
+
 body {
+  display: flex;
+  justify-content: center;
+  color: white;
+  background-color: #3a3a3a;
+  height: 100vh;
+}
+body * > textarea {
+  background: #425144;
+  resize: none;
+  border: none;
+  outline: none;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80vw;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.header {
   display: flex;
   justify-content: center;
 }
 
-.wrapper {
-  display: grid;
-  width: 80vw;
-  grid-template-columns: repeat(1, 1fr);
-}
-.wrapper_Header {
-  display: flex;
-  justify-content: center;
-}
-.wrapper_Button {
-  height: 20px;
-  width: 100px;
-}
-.wrapper_Output {
-  background-color: lightgray;
-  border: 1px solid black;
-  border-radius: 5px;
-  height: 30vh;
-  display: flex;
-  justify-content: left;
-}
-.wrapper_Input {
-  border: 1px solid black;
-  border-radius: 5px;
-  height: 30vh;
-}
-.wrapper_Container {
+.container {
   display: flex;
   width: 100%;
   flex-direction: column;
   text-align: center;
 }
-.wrapper_Container--buttons {
-  display: flex;
-  justify-content: space-around;
-  padding-top: 50px;
+.container_Input {
+  height: 30vh;
 }
-.wrapper_Container_Mode {
-  width: 200px;
+.container_Output {
+  height: 30vh;
+  display: flex;
+  justify-content: left;
+}
+
+.buttonsContainer {
+  display: flex;
+  width: 90%;
+  justify-content: space-around;
+}
+.buttonsContainer_Button {
+  background: #c9b576;
+}
+
+.border {
+  border: 2px dotted #767a3a;
+  border-radius: 8px;
+  margin: 0.8rem;
+}
+.border:hover {
+  cursor: crosshair;
+  border: solid #767a3a;
+  box-shadow: inset 0 0 0.5em #767a3a, inset 0 0 0.5em #767a3a;
+  transition: box-shadow 0.2s ease-in;
 }

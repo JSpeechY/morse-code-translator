@@ -1,51 +1,75 @@
+@use "typography";
+@use "palette";
+
+::selection {
+    background-color: hotpink;
+}
+
 body {
+    display: flex;
+    justify-content: center;
+    color: white;
+    background-color: map-get(palette.$colors, "quarternary");
+    height: 100vh;
+    & * > textarea {
+        background: map-get(palette.$colors, "primary");
+        resize: none;
+        border: none;
+        outline: none;
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 80vw;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.header {
     display: flex;
     justify-content: center;
 }
 
-.wrapper {
-    &_Header {
-        display: flex;
-        justify-content: center;
-    }
+.container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
 
-    display: grid;
-    width: 80vw;
-    grid-template-columns: repeat(1, 1fr);
-    &_Button {
-        height: 20px;
-        width: 100px;
+    &_Input {
+        height: 30vh;
     }
 
     &_Output {
-        background-color: lightgray;
-        border: 1px solid black;
-        border-radius: 5px;
         height: 30vh;
         display: flex;
         justify-content: left;
     }
+}
 
-    &_Input {
-        border: 1px solid black;
-        border-radius: 5px;
-        height: 30vh;
+.buttonsContainer {
+    &_Button {
+        background: map-get(palette.$colors, "tertiary");
     }
 
-    &_Container {
-        display: flex;
-        width: 100%;
-        flex-direction: column;
-        text-align: center;
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+}
 
-        &--buttons {
-            display: flex;
-            justify-content: space-around;
-            padding-top: 50px;
-        }
+.border {
+    border: 2px dotted map-get(palette.$colors, "secondary");
+    border-radius: 8px;
+    margin: 0.8rem;
 
-        &_Mode {
-            width: 200px;
-        }
+    &:hover {
+        cursor: crosshair;
+        border: solid map-get(palette.$colors, "secondary");
+        box-shadow: inset 0 0 0.5em map-get(palette.$colors, "secondary"),
+            inset 0 0 0.5em map-get(palette.$colors, "secondary");
+        transition: box-shadow 0.2s ease-in;
     }
 }
