@@ -47,12 +47,12 @@ Functions you write must be unit tested (you won't be able to write unit tests f
 
 ## Design Considerations: 
 
--I wanted to indicate clearly whether we were generating morse code or translating it into the english alphabet.
--I wanted to have a button which enabled altnerating between generating and translating
--I wanted it to be mobile friendly
--I wanted to style it in such a fashion that it looked historically relevant.
+- I wanted to indicate clearly whether we were generating morse code or translating it into the english alphabet.
+- I wanted to have a button which enabled altnerating between generating and translating
+- I wanted it to be mobile friendly
+- I wanted to style it in such a fashion that it looked historically relevant.
 
-### Screenshot
+## Screenshot
 
 Landing Page
 
