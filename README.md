@@ -11,8 +11,8 @@ A simple program that converts text to morse code and vice versa.
 | ------------------------------- |
 | [About](#About) |
 | [MVP](#MVP) |
-| [Technologies Used](#TechUsed)             |
-| [Design Considerations](#Design)   |                 |
+| [Technologies Used](#TechnologiseUsed)             |
+| [Design Considerations](#DesignConsiderations)   |                 |
 | [Screenshot](#Screenshot)       |
 
 ---
