@@ -11,7 +11,7 @@ A simple program that converts text to morse code and vice versa.
 | ------------------------------- |
 | [About](#About) |
 | [MVP](#MVP) |
-| [Technologies Used](#TechnologiseUsed)             |
+| [Technologies Used](#TechnologiesUsed)             |
 | [Design Considerations](#DesignConsiderations)   |                 |
 | [Screenshot](#Screenshot)       |
 
@@ -45,7 +45,7 @@ Functions you write must be unit tested (you won't be able to write unit tests f
 - Javascript
 - Jest
 
-## Design Considerations: 
+## Design Considerations 
 
 - I wanted to indicate clearly whether we were generating morse code or translating it into the english alphabet.
 - I wanted to have a button which enabled altnerating between generating and translating
